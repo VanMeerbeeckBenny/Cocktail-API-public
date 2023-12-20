@@ -21,7 +21,7 @@ This API provides information about cocktails, including details on various aspe
 
 ### Docker
 To Dockerize the project with MS-SQL DB, follow these steps:
-1. Make sure to have a .env file with following variables:  
+1. Make sure to have a .env file with following variables(*I added .env to .gitignore to promote good practices.*):  
   - SA_PASSWORD=Pass1234  
   - ACCEPT_EULA=Y  
   - MSSQL_DATA_DIR=/var/opt/sqlserver/data  
