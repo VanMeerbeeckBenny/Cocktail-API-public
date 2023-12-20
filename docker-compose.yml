@@ -2,9 +2,7 @@ version: '3.4'
 
 services:
     pri.cocktails.api:
-        image: bennydev/myapi
-        env_file:
-            - .env
+        image: bennydev/myapi       
         ports:
           - 443:443
           - 80:80
