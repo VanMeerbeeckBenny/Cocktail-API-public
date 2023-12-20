@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+    pri.cocktails.api:
+        image: bennydev/myapi
+        env_file:
+            - .env
+        ports:
+          - 443:443
+          - 80:80
+        networks:
+            - my_network 
+    sqldata:
+        container_name: my-sqldata
+        image: mcr.microsoft.com/mssql/server:2017-latest   
+        restart: unless-stopped
+        env_file:
+            - .env
+   
+        ports:
+            - 10500:1433
+        volumes:      
+            - sqlsystem:/var/opt/mssql/
+            - sqldata:${MSSQL_DATA_DIR}
+            - sqllog:${MSSQL_LOG_DIR}
+            - sqlbackup:${MSSQL_BACKUP_DIR}
+        networks:
+        - my_network
+networks:
+# The network the above containers share, for accessing the database
+   my_network:
+        driver: bridge
+    
+volumes:
+    sqlsystem:
+    sqldata:
+    sqllog:
+    sqlbackup:
