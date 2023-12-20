@@ -1,5 +1,11 @@
 ## Project Information
 
+To create the database, please follow these instructions:
+
+1. Right-click on the solution and choose *Open Folder in File Explorer*.  
+2. Execute the command: 
+`dotnet ef database update -s Pri.Cocktails.Api -p Pri.Cocktails.Infrastructure` 
+
 ### Cocktail API
 
 This API provides information about cocktails, including details on various aspects such as:
