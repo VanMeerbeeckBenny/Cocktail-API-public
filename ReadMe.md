@@ -2,7 +2,7 @@
 
 To create the database, please follow these instructions:
 
-1. Right-click on the solution and choose *Open Folder in File Explorer*.  
+1. Right-click on the solution and choose *Open in Terminal*.  
 2. Execute the command: 
 `dotnet ef database update -s Pri.Cocktails.Api -p Pri.Cocktails.Infrastructure` 
 
@@ -35,5 +35,6 @@ To Dockerize the project with MS-SQL DB, follow these steps:
   - MSSQL_BACKUP_DIR=/var/opt/sqlserver/backup
 2. Use the comment out connection string in *appsettings.json*
 3. Run the compose file.
+5. Right-click on the solution and choose *Open in Terminal*. 
 4. Run following command:  
 `dotnet ef database update -s Pri.Cocktails.Api -p Pri.Cocktails.Infrastructure`  
